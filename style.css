@@ -81,14 +81,24 @@ section {
 }
 
 .home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  max-width: 900px; /* or 800px, adjust as you like */
+  margin: 0 auto;   /* centers horizontally */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;        /* reduced gap */
+  flex-wrap: nowrap;
+  padding: 2rem 1rem;
+}
+
+
+.home-content {
+  flex: 1;
 }
 
 .home-img img {
-    width: 35vw;
-    margin-left: 10%;
+   border-radius: 20px;   /* adjust radius to your liking */ 
+   height: auto;
     animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -156,6 +166,88 @@ span {
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
 }
+
+.button-group i {
+    font-size: 3rem; /* adjust this for size */
+    color: #5400b5;   /* LinkedIn blue */
+    transition: transform 0.3s ease;
+    padding: 1rem;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+   font-size: 2rem;
+}
+
+.experience-card {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.experience-card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.experience-card p,
+.experience-card ul {
+  margin-bottom: 0.75rem;
+}
+
+.experience-card ul {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+   font-size: 2rem;
+}
+.project-card {
+  background-color: #e7cfdac0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.project-card p,
+.project-card ul {
+  margin-bottom: 0.75rem;
+}
+
+.project-card ul {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+
+
 
 .btn {
     display: inline-block;
@@ -435,6 +527,7 @@ span {
         width: 70vw;
         margin-top: 4rem;
     }
+    
 
     .about {
         flex-direction: column-reverse;
