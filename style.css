@@ -422,6 +422,19 @@ span {
 }
 
 
+.github-link img {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.2s;
+  vertical-align: middle;
+  padding-left: 30px;
+}
+
+.github-link img:hover {
+  transform: scale(1.1);
+}
+
+
 /* BREAKPOINTS */
 @media (max-width: 1200px) {
     html {
